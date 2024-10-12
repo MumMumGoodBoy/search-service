@@ -1,0 +1,282 @@
+[
+  {
+    "id": "1",
+    "name": "Spaghetti Carbonara",
+    "description": "Classic Italian pasta with creamy sauce, pancetta, and Parmesan cheese.",
+    "price": 12.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Penne Arrabbiata",
+    "description": "Penne pasta in a spicy tomato sauce with garlic, chili peppers, and basil.",
+    "price": 11.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Salmon Nigiri",
+    "description": "Fresh salmon slices over seasoned sushi rice, served with soy sauce and wasabi.",
+    "price": 8.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "4",
+    "name": "California Roll",
+    "description": "Sushi roll with crab meat, avocado, and cucumber, topped with sesame seeds.",
+    "price": 7.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Classic Cheeseburger",
+    "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles on a toasted bun.",
+    "price": 9.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Bacon BBQ Burger",
+    "description": "Grilled beef burger with crispy bacon, BBQ sauce, cheddar cheese, and onion rings.",
+    "price": 11.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Beef Tacos",
+    "description": "Soft tacos filled with seasoned beef, lettuce, tomatoes, cheese, and salsa.",
+    "price": 8.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Chicken Quesadilla",
+    "description": "Grilled quesadilla stuffed with seasoned chicken, cheese, and peppers.",
+    "price": 7.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with fresh tomato sauce, mozzarella cheese, and basil leaves.",
+    "price": 10.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Pepperoni Pizza",
+    "description": "Thin-crust pizza topped with pepperoni slices, mozzarella cheese, and tomato sauce.",
+    "price": 12.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Chicken Tikka Masala",
+    "description": "Tender chicken in a creamy tomato curry sauce, served with basmati rice.",
+    "price": 13.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Vegetable Biryani",
+    "description": "Aromatic basmati rice with mixed vegetables, spices, and herbs, served with raita.",
+    "price": 11.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Grilled Ribeye Steak",
+    "description": "Succulent ribeye steak, cooked to your preference, served with garlic mashed potatoes.",
+    "price": 24.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Steak Frites",
+    "description": "Juicy steak served with a side of crispy fries and a green peppercorn sauce.",
+    "price": 22.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Pad Thai Noodles",
+    "description": "Stir-fried rice noodles with shrimp, tofu, bean sprouts, and crushed peanuts.",
+    "price": 12.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "16",
+    "name": "Beef Ramen",
+    "description": "Rich beef broth with ramen noodles, soft-boiled egg, green onions, and sliced beef.",
+    "price": 13.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "17",
+    "name": "Greek Salad",
+    "description": "Fresh salad with cucumbers, tomatoes, feta cheese, olives, and a lemon vinaigrette.",
+    "price": 8.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Caesar Salad",
+    "description": "Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.",
+    "price": 7.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "19",
+    "name": "BBQ Ribs",
+    "description": "Tender ribs slow-cooked in BBQ sauce, served with coleslaw and fries.",
+    "price": 18.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "20",
+    "name": "Pulled Pork Sandwich",
+    "description": "Pulled pork in BBQ sauce on a bun, with pickles and a side of potato salad.",
+    "price": 10.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "21",
+    "name": "Pork Dumplings",
+    "description": "Steamed dumplings filled with seasoned pork, served with soy dipping sauce.",
+    "price": 9.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "22",
+    "name": "Fish and Chips",
+    "description": "Battered fish served with crispy fries and tartar sauce.",
+    "price": 14.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "23",
+    "name": "Spicy Tuna Tartare",
+    "description": "Fresh tuna diced and mixed with avocado, sesame oil, and spicy sauce.",
+    "price": 11.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "24",
+    "name": "Chocolate Lava Cake",
+    "description": "Warm chocolate cake with a gooey center, served with vanilla ice cream.",
+    "price": 6.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "25",
+    "name": "Tiramisu",
+    "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone.",
+    "price": 7.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "26",
+    "name": "Fruit Tart",
+    "description": "Buttery tart crust filled with pastry cream and topped with fresh fruit.",
+    "price": 5.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "27",
+    "name": "Cheesecake",
+    "description": "Creamy cheesecake on a graham cracker crust, served with strawberry sauce.",
+    "price": 6.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "28",
+    "name": "Vanilla Ice Cream",
+    "description": "Classic vanilla ice cream, smooth and creamy, served in a bowl or cone.",
+    "price": 4.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "29",
+    "name": "Brownie Sundae",
+    "description": "Warm brownie topped with vanilla ice cream, chocolate sauce, and nuts.",
+    "price": 7.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "30",
+    "name": "Coffee",
+    "description": "Freshly brewed coffee, rich and aromatic, served hot.",
+    "price": 2.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "31",
+    "name": "Tea",
+    "description": "Steeped tea with a variety of flavors, served hot or iced.",
+    "price": 2.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "32",
+    "name": "Soda",
+    "description": "Chilled carbonated soft drink in various flavors.",
+    "price": 1.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "33",
+    "name": "Lemonade",
+    "description": "Refreshing lemonade made from freshly squeezed lemons.",
+    "price": 3.49,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "34",
+    "name": "Fruit Smoothie",
+    "description": "Blended smoothie with seasonal fruits and yogurt.",
+    "price": 4.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "35",
+    "name": "Mango Lassi",
+    "description": "Creamy yogurt drink blended with mango pulp and cardamom.",
+    "price": 3.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "36",
+    "name": "Chocolate Milkshake",
+    "description": "Thick chocolate milkshake topped with whipped cream and chocolate shavings.",
+    "price": 5.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "37",
+    "name": "Vanilla Milkshake",
+    "description": "Creamy vanilla milkshake topped with whipped cream.",
+    "price": 5.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "38",
+    "name": "Strawberry Milkshake",
+    "description": "Refreshing strawberry milkshake topped with whipped cream.",
+    "price": 5.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "39",
+    "name": "Mint Mojito",
+    "description": "Refreshing cocktail made with mint, lime, sugar, and soda water.",
+    "price": 7.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  },
+  {
+    "id": "40",
+    "name": "Pina Colada",
+    "description": "Tropical cocktail made with rum, coconut cream, and pineapple juice.",
+    "price": 8.99,
+    "imageUrl": "https://i.ytimg.com/vi/RXNIJO1h_1w/maxresdefault.jpg"
+  }
+]

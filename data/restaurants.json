@@ -1,0 +1,141 @@
+[
+  {
+    "id": "1",
+    "name": "Pasta Palace",
+    "address": "123 Main St",
+    "phone": "555-1234",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Sushi World",
+    "address": "456 Elm St",
+    "phone": "555-5678",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Burger Barn",
+    "address": "789 Oak St",
+    "phone": "555-8765",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Taco Tower",
+    "address": "101 Pine St",
+    "phone": "555-4321",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Pizza Plaza",
+    "address": "202 Maple St",
+    "phone": "555-0987",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Curry Corner",
+    "address": "303 Cedar St",
+    "phone": "555-3456",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Steak House",
+    "address": "404 Birch St",
+    "phone": "555-7890",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Noodle Nest",
+    "address": "505 Walnut St",
+    "phone": "555-6789",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Salad Spot",
+    "address": "606 Ash St",
+    "phone": "555-2345",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "10",
+    "name": "BBQ Base",
+    "address": "707 Cherry St",
+    "phone": "555-0123",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Dumpling Delight",
+    "address": "808 Chestnut St",
+    "phone": "555-7654",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Seafood Shack",
+    "address": "909 Poplar St",
+    "phone": "555-8901",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Cafe Central",
+    "address": "110 Spruce St",
+    "phone": "555-2468",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Deli Delight",
+    "address": "121 Redwood St",
+    "phone": "555-1357",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Bistro Bliss",
+    "address": "232 Sequoia St",
+    "phone": "555-2468",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "16",
+    "name": "Grill Garden",
+    "address": "343 Cypress St",
+    "phone": "555-3579",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "17",
+    "name": "Vegan Venue",
+    "address": "454 Fir St",
+    "phone": "555-4680",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Spice Street",
+    "address": "565 Holly St",
+    "phone": "555-5791",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "19",
+    "name": "Brunch Bistro",
+    "address": "676 Juniper St",
+    "phone": "555-6802",
+    "imageUrl": "https://www.car.chula.ac.th/carweb2/images/DSC_5387.jpg"
+  },
+  {
+    "id": "20",
+    "name": "Dessert Den",
+    "address": "787 Magnolia St",
+    "phone": "555-7913"
+  }
+]
