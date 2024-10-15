@@ -9,6 +9,14 @@ type FoodIndex struct {
 	ImageUrl    string  `json:"imageUrl"`
 }
 
-func (i *FoodIndex) GetIndexName() string {
-	return "foods"
+type FoodEvent struct {
+	Event        string  `json:"event"`
+	Id           string  `json:"id"`
+	FoodName     string  `json:"foodName"`
+	RestaurantId string  `json:"restaurantId"`
+	Price        float32 `json:"price"`
+	Description	 string	 `json:"description"`
+	ImageUrl	 string	 `json:"imageUrl"`
 }
+
+

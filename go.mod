@@ -7,7 +7,7 @@ require (
 	github.com/meilisearch/meilisearch-go v0.28.0
 )
 
-require github.com/rabbitmq/amqp091-go v1.10.0 // indirect
+require github.com/rabbitmq/amqp091-go v1.10.0
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect

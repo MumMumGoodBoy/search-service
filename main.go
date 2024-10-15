@@ -35,13 +35,17 @@ func main() {
 	}
 	defer rabbitMQChannel.Close()
 
+
 	searchService := service.SearchService{
 		Client:          client,
 		RabbitMQChannel: rabbitMQChannel,
 	}
 
-	searchService.InitIndexWithDocuments("restaurants", "data/restaurants.json")
-	searchService.InitIndexWithDocuments("foods", "data/foods.json")
+
+	// searchService.InitIndexWithDocuments("restaurants", "data/restaurants.json")
+	// searchService.InitIndexWithDocuments("foods", "data/foods.json")
+	searchService.SetUpRestaurantConsumer()
+	searchService.SetUpFoodConsumer()
 	route.CreateSearchRoute(app, &searchService)
 
 	fmt.Println("Server is running on port 8080")
