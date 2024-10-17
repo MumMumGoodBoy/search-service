@@ -41,7 +41,6 @@ func main() {
 		RabbitMQChannel: rabbitMQChannel,
 	}
 
-
 	// searchService.InitIndexWithDocuments("restaurants", "data/restaurants.json")
 	// searchService.InitIndexWithDocuments("foods", "data/foods.json")
 	searchService.SetUpRestaurantConsumer()

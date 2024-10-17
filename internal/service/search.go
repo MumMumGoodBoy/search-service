@@ -83,7 +83,7 @@ func (s *SearchService) SearchFood(c *fiber.Ctx) error {
 
 func (s *SearchService) SetUpRestaurantConsumer() error {
 	q, err := s.RabbitMQChannel.QueueDeclare(
-		"",    // Empty name creates a random queue
+		"restaurant_search_queue",    // Empty name creates a random queue
 		false, // Not durable
 		false, // Auto-delete when not used
 		true,  // Exclusive (only this connection can use it)
@@ -146,7 +146,7 @@ func (s *SearchService) SetUpRestaurantConsumer() error {
 
 func (s *SearchService) SetUpFoodConsumer() error {
 	q, err := s.RabbitMQChannel.QueueDeclare(
-		"",    // Empty name creates a random queue
+		"food_search_queue",    // Empty name creates a random queue
 		false, // Not durable
 		false, // Auto-delete when not used
 		true,  // Exclusive (only this connection can use it)
