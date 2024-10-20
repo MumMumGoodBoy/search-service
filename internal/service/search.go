@@ -80,27 +80,25 @@ func (s *SearchService) SearchFood(c *fiber.Ctx) error {
 	return c.Status(200).JSON(searchResult)
 }
 
-
 func (s *SearchService) SetUpRestaurantConsumer() error {
 	q, err := s.RabbitMQChannel.QueueDeclare(
-		"restaurant_search_queue",    // Empty name creates a random queue
-		false, // Not durable
-		false, // Auto-delete when not used
-		true,  // Exclusive (only this connection can use it)
-		false, // No-wait
-		nil,   // Arguments
+		"restaurant_search_queue", // Empty name creates a random queue
+		false,                     // Not durable
+		false,                     // Auto-delete when not used
+		true,                      // Exclusive (only this connection can use it)
+		false,                     // No-wait
+		nil,                       // Arguments
 	)
 	if err != nil {
 		return fmt.Errorf("failed to declare queue: %w", err)
 	}
 
-
 	err = s.RabbitMQChannel.QueueBind(
-		q.Name,            // Queue name
-		"restaurant.*",    // Routing key
+		q.Name,             // Queue name
+		"restaurant.*",     // Routing key
 		"restaurant_topic", // Exchange name
-		false,             // No-wait
-		nil,               // Arguments
+		false,              // No-wait
+		nil,                // Arguments
 	)
 	if err != nil {
 		return fmt.Errorf("failed to bind queue: %w", err)
@@ -119,26 +117,26 @@ func (s *SearchService) SetUpRestaurantConsumer() error {
 	if err != nil {
 		return fmt.Errorf("failed to consume msg: %w", err)
 	}
-	
+
 	go func() {
 		for d := range messages {
-				var restaurant model.RestaurantEvent
-				err := json.Unmarshal(d.Body, &restaurant)
-				if err != nil {
-					log.Printf("Error unmarshalling message: %v", err)
-				}
-				event := strings.Split(string(restaurant.Event), ".")[1]
-				switch event {
-					case "create" :
-						s.insertRestaurantocument(restaurant)
-					case "update" :
-						s.updateRestaurantDocument(restaurant)
-					case "delete" :
-						s.deleteRestaurantDocument(restaurant)
-					default :
-						log.Printf("Error unsupported event: %v", event)
-				}
-				
+			var restaurant model.RestaurantEvent
+			err := json.Unmarshal(d.Body, &restaurant)
+			if err != nil {
+				log.Printf("Error unmarshalling message: %v", err)
+			}
+			event := strings.Split(string(restaurant.Event), ".")[1]
+			switch event {
+			case "create":
+				s.insertRestaurantocument(restaurant)
+			case "update":
+				s.updateRestaurantDocument(restaurant)
+			case "delete":
+				s.deleteRestaurantDocument(restaurant)
+			default:
+				log.Printf("Error unsupported event: %v", event)
+			}
+
 		}
 	}()
 	return nil
@@ -146,24 +144,23 @@ func (s *SearchService) SetUpRestaurantConsumer() error {
 
 func (s *SearchService) SetUpFoodConsumer() error {
 	q, err := s.RabbitMQChannel.QueueDeclare(
-		"food_search_queue",    // Empty name creates a random queue
-		false, // Not durable
-		false, // Auto-delete when not used
-		true,  // Exclusive (only this connection can use it)
-		false, // No-wait
-		nil,   // Arguments
+		"food_search_queue", // Empty name creates a random queue
+		false,               // Not durable
+		false,               // Auto-delete when not used
+		true,                // Exclusive (only this connection can use it)
+		false,               // No-wait
+		nil,                 // Arguments
 	)
 	if err != nil {
 		return fmt.Errorf("failed to declare queue: %w", err)
 	}
 
-
 	err = s.RabbitMQChannel.QueueBind(
-		q.Name,            // Queue name
-		"food.*",    // Routing key
+		q.Name,       // Queue name
+		"food.*",     // Routing key
 		"food_topic", // Exchange name
-		false,             // No-wait
-		nil,               // Arguments
+		false,        // No-wait
+		nil,          // Arguments
 	)
 	if err != nil {
 		return fmt.Errorf("failed to bind queue: %w", err)
@@ -181,44 +178,44 @@ func (s *SearchService) SetUpFoodConsumer() error {
 	if err != nil {
 		return fmt.Errorf("failed to consume msg: %w", err)
 	}
-	
+
 	go func() {
 		for d := range messages {
-				var food model.FoodEvent
-				err := json.Unmarshal(d.Body, &food)
-				if err != nil {
-					log.Printf("Error unmarshalling message: %v", err)
-				}
-				event := strings.Split(string(food.Event), ".")[1]
-				switch event {
-					case "create" :
-						s.insertFoodDocument(food)
-					case "update" :
-						s.updateFoodDocument(food)
-					case "delete" :
-						s.deleteFoodDocument(food)
-					default :
-						log.Printf("Error unsupported event: %v", event)
-				}
-				
+			var food model.FoodEvent
+			err := json.Unmarshal(d.Body, &food)
+			if err != nil {
+				log.Printf("Error unmarshalling message: %v", err)
+			}
+			event := strings.Split(string(food.Event), ".")[1]
+			switch event {
+			case "create":
+				s.insertFoodDocument(food)
+			case "update":
+				s.updateFoodDocument(food)
+			case "delete":
+				s.deleteFoodDocument(food)
+			default:
+				log.Printf("Error unsupported event: %v", event)
+			}
+
 		}
 	}()
 	return nil
 }
 
-func (s *SearchService) insertFoodDocument(newFood model.FoodEvent){
+func (s *SearchService) insertFoodDocument(newFood model.FoodEvent) {
 	documents := model.FoodIndex{
-		ID: newFood.Id,
-		Name: newFood.FoodName,
-		Restaurant: newFood.RestaurantId,
+		ID:          newFood.Id,
+		Name:        newFood.FoodName,
+		Restaurant:  newFood.RestaurantId,
 		Description: newFood.Description,
-		Price: newFood.Price,
-		ImageUrl: newFood.ImageUrl,
-	  }
-	s.Client.Index("foods").AddDocuments(documents)  
+		Price:       newFood.Price,
+		ImageUrl:    newFood.ImageUrl,
+	}
+	s.Client.Index("foods").AddDocuments(documents)
 }
 
-func (s *SearchService) updateFoodDocument(newFood model.FoodEvent){
+func (s *SearchService) updateFoodDocument(newFood model.FoodEvent) {
 	addIfNotEmpty := func(m map[string]interface{}, key string, value interface{}) {
 		if value != nil {
 			m[key] = value
@@ -236,21 +233,21 @@ func (s *SearchService) updateFoodDocument(newFood model.FoodEvent){
 	s.Client.Index("foods").UpdateDocuments([]map[string]interface{}{documents})
 }
 
-func (s *SearchService) deleteFoodDocument(food model.FoodEvent){
+func (s *SearchService) deleteFoodDocument(food model.FoodEvent) {
 	s.Client.Index("foods").DeleteDocument(food.Id)
 }
 
-func (s *SearchService) insertRestaurantocument(newRestaurant model.RestaurantEvent){
+func (s *SearchService) insertRestaurantocument(newRestaurant model.RestaurantEvent) {
 	documents := model.RestaurantIndex{
-		ID: newRestaurant.Id,
-		Name: newRestaurant.RestaurantName,
+		ID:      newRestaurant.Id,
+		Name:    newRestaurant.RestaurantName,
 		Address: newRestaurant.Address,
-		Phone: newRestaurant.Phone,
-	  }
-	s.Client.Index("restaurants").AddDocuments(documents)  
+		Phone:   newRestaurant.Phone,
+	}
+	s.Client.Index("restaurants").AddDocuments(documents)
 }
 
-func (s *SearchService) updateRestaurantDocument(newRestaurant model.RestaurantEvent){
+func (s *SearchService) updateRestaurantDocument(newRestaurant model.RestaurantEvent) {
 	addIfNotEmpty := func(m map[string]interface{}, key string, value interface{}) {
 		if value != nil {
 			m[key] = value
@@ -266,7 +263,6 @@ func (s *SearchService) updateRestaurantDocument(newRestaurant model.RestaurantE
 	s.Client.Index("restaurants").UpdateDocuments([]map[string]interface{}{documents})
 }
 
-func (s *SearchService) deleteRestaurantDocument(restaurant model.RestaurantEvent){
+func (s *SearchService) deleteRestaurantDocument(restaurant model.RestaurantEvent) {
 	s.Client.Index("restaurants").DeleteDocument(restaurant.Id)
 }
-
