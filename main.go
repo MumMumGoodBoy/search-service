@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -19,11 +18,14 @@ func main() {
 		log.Fatalf("Error loading .env file")
 	}
 
+	port := os.Getenv("PORT")
+	rabbitMQURL := os.Getenv("RABBITMQ_URL")
 	app := fiber.New()
 
 	client := meilisearch.New(os.Getenv("MEILISEARCH_URL"), meilisearch.WithAPIKey(os.Getenv("MEILISEARCH_MASTER_KEY")))
+	log.Println("Connected to MeiliSearch")
 
-	rabbitMQConn, err := amqp091.Dial(os.Getenv("RABBITMQ_URL"))
+	rabbitMQConn, err := amqp091.Dial(rabbitMQURL)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -35,18 +37,19 @@ func main() {
 	}
 	defer rabbitMQChannel.Close()
 
-
 	searchService := service.SearchService{
 		Client:          client,
 		RabbitMQChannel: rabbitMQChannel,
 	}
+	log.Println("Connected to RabbitMQ")
 
 	// searchService.InitIndexWithDocuments("restaurants", "data/restaurants.json")
 	// searchService.InitIndexWithDocuments("foods", "data/foods.json")
 	searchService.SetUpRestaurantConsumer()
 	searchService.SetUpFoodConsumer()
+
 	route.CreateSearchRoute(app, &searchService)
 
-	fmt.Println("Server is running on port 8080")
-	app.Listen(":8080")
+	log.Println("Search service is running on port", port)
+	app.Listen(port)
 }

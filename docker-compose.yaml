@@ -9,5 +9,5 @@ services:
     ports:
       - "7700:7700"
     volumes:
-      - ./meili_data:/meili_data
+      - ./meili_data:/var/lib/meilisearch
     restart: unless-stopped
