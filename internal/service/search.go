@@ -83,9 +83,9 @@ func (s *SearchService) SearchFood(c *fiber.Ctx) error {
 func (s *SearchService) SetUpRestaurantConsumer() error {
 	q, err := s.RabbitMQChannel.QueueDeclare(
 		"restaurant_search_queue", // Empty name creates a random queue
-		false,                     // Not durable
+		true,                      // Durable
 		false,                     // Auto-delete when not used
-		true,                      // Exclusive (only this connection can use it)
+		false,                     // Exclusive (only this connection can use it)
 		false,                     // No-wait
 		nil,                       // Arguments
 	)
@@ -122,6 +122,7 @@ func (s *SearchService) SetUpRestaurantConsumer() error {
 		for d := range messages {
 			var restaurant model.RestaurantEvent
 			err := json.Unmarshal(d.Body, &restaurant)
+			fmt.Println(restaurant)
 			if err != nil {
 				log.Printf("Error unmarshalling message: %v", err)
 			}
@@ -145,9 +146,9 @@ func (s *SearchService) SetUpRestaurantConsumer() error {
 func (s *SearchService) SetUpFoodConsumer() error {
 	q, err := s.RabbitMQChannel.QueueDeclare(
 		"food_search_queue", // Empty name creates a random queue
-		false,               // Not durable
+		true,                // Durable
 		false,               // Auto-delete when not used
-		true,                // Exclusive (only this connection can use it)
+		false,               // Exclusive (only this connection can use it)
 		false,               // No-wait
 		nil,                 // Arguments
 	)
@@ -183,6 +184,7 @@ func (s *SearchService) SetUpFoodConsumer() error {
 		for d := range messages {
 			var food model.FoodEvent
 			err := json.Unmarshal(d.Body, &food)
+			fmt.Println(food)
 			if err != nil {
 				log.Printf("Error unmarshalling message: %v", err)
 			}

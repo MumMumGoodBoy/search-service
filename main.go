@@ -45,11 +45,17 @@ func main() {
 
 	// searchService.InitIndexWithDocuments("restaurants", "data/restaurants.json")
 	// searchService.InitIndexWithDocuments("foods", "data/foods.json")
-	searchService.SetUpRestaurantConsumer()
-	searchService.SetUpFoodConsumer()
+	err = searchService.SetUpRestaurantConsumer()
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = searchService.SetUpFoodConsumer()
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	route.CreateSearchRoute(app, &searchService)
 
 	log.Println("Search service is running on port", port)
-	app.Listen(port)
+	app.Listen(":" + port)
 }
