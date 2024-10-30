@@ -21,7 +21,6 @@ RUN go mod download
 # Copy the rest of the application code
 COPY . .
 
-RUN make generate
 
 RUN go build -o myapp .
 
