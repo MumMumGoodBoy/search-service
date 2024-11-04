@@ -6,7 +6,7 @@ type FoodIndex struct {
 	Name        string  `json:"name"`
 	Description string  `json:"description"`
 	Price       float32 `json:"price"`
-	ImageUrl    string  `json:"imageUrl"`
+	ImageUrl    string  `json:"image_url"`
 }
 
 type FoodEvent struct {
@@ -15,8 +15,6 @@ type FoodEvent struct {
 	FoodName     string  `json:"foodName"`
 	RestaurantId string  `json:"restaurantId"`
 	Price        float32 `json:"price"`
-	Description	 string	 `json:"description"`
-	ImageUrl	 string	 `json:"imageUrl"`
+	Description  string  `json:"description"`
+	ImageUrl     string  `json:"image_url"`
 }
-
-
