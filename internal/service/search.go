@@ -230,7 +230,7 @@ func (s *SearchService) updateFoodDocument(newFood model.FoodEvent) {
 	addIfNotEmpty(documents, "restaurant", newFood.RestaurantId)
 	addIfNotEmpty(documents, "description", newFood.Description)
 	addIfNotEmpty(documents, "price", newFood.Price)
-	addIfNotEmpty(documents, "imageUrl", newFood.ImageUrl)
+	addIfNotEmpty(documents, "image_url", newFood.ImageUrl)
 
 	s.Client.Index("foods").UpdateDocuments([]map[string]interface{}{documents})
 }
