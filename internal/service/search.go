@@ -66,17 +66,34 @@ func (s *SearchService) SearchFood(c *fiber.Ctx) error {
 	search := c.Query("search")
 	offset := c.QueryInt("offset")
 	limit := c.QueryInt("limit")
+	minPrice := c.QueryInt("minPrice")
+	maxPrice := c.QueryInt("maxPrice")
+	var filterParts []string
+	if minPrice > 0 {
+		filterParts = append(filterParts, fmt.Sprintf("price >= %d", minPrice))
+	}
+	if maxPrice > 0 {
+		filterParts = append(filterParts, fmt.Sprintf("price <= %d", maxPrice))
+	}
 
+	filter := ""
+	if len(filterParts) > 0 {
+		filter = strings.Join(filterParts, " AND ")
+	}
+	fmt.Println(filter)
+	s.Client.Index("foods").UpdateFilterableAttributes(&[]string{
+		"price",
+	})
 	searchResult, err := s.Client.Index("foods").Search(search, &meilisearch.SearchRequest{
 		Limit:  int64(limit),
 		Offset: int64(offset),
+		Filter: filter,
 	})
 	if err != nil {
 		return c.Status(500).JSON(fiber.Map{
 			"error": err.Error(),
 		})
 	}
-
 	return c.Status(200).JSON(searchResult)
 }
 
